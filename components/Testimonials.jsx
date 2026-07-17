@@ -115,7 +115,7 @@ export default function Testimonials() {
           <div
             ref={trackRef}
             onScroll={onScroll}
-            className="flex snap-x snap-mandatory gap-10 overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+            className="flex snap-x snap-mandatory gap-0 md:gap-[6rem] overflow-x-auto scroll-smooth [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
           >
             {testimonials.map((t) => (
               <figure
@@ -150,7 +150,11 @@ export default function Testimonials() {
               onClick={() => goTo(page - 1)}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-ink transition-colors hover:border-cyan hover:text-cyan"
             >
-              <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4 fill-current"
+                aria-hidden="true"
+              >
                 <path d="m14.7 5.3-6.7 6.7 6.7 6.7 1.4-1.4-5.3-5.3 5.3-5.3Z" />
               </svg>
             </button>
@@ -175,7 +179,11 @@ export default function Testimonials() {
               onClick={() => goTo(page + 1)}
               className="flex h-9 w-9 items-center justify-center rounded-full border border-ink/20 text-ink transition-colors hover:border-cyan hover:text-cyan"
             >
-              <svg viewBox="0 0 24 24" className="h-4 w-4 fill-current" aria-hidden="true">
+              <svg
+                viewBox="0 0 24 24"
+                className="h-4 w-4 fill-current"
+                aria-hidden="true"
+              >
                 <path d="m9.3 5.3-1.4 1.4 5.3 5.3-5.3 5.3 1.4 1.4 6.7-6.7Z" />
               </svg>
             </button>
