@@ -1,0 +1,87 @@
+/* ================================================================
+   Smily — global styles (Tailwind CSS v4)
+   Theme tokens are declared here with @theme (no tailwind.config).
+   Palette matches the teal/cyan dental-care design.
+   ================================================================ */
+@import "tailwindcss";
+
+@theme {
+  /* Brand palette */
+  --color-cyan: #0db4d4;      /* primary buttons / links        */
+  --color-cyan-dark: #0a97b2; /* button hover                   */
+  --color-teal: #12403c;      /* dark section bg (services)     */
+  --color-aqua: #36d1e0;      /* bright section bg (growing)    */
+  --color-mint: #e9f7f6;      /* pale section bg (appointment)  */
+  --color-ink: #14303c;       /* headings / body text           */
+  --color-stone: #64707a;     /* muted text                     */
+  --color-coral: #f4502c;     /* kickers / service icons        */
+
+  /* Typography (variables injected by next/font in app/layout.jsx) */
+  --font-display: var(--font-jakarta), Georgia, sans-serif;
+  --font-body: var(--font-jost), "Segoe UI", sans-serif;
+}
+
+/* Fluid root font size — every rem-based Tailwind value scales
+   smoothly between small and large viewports. */
+html {
+  font-size: clamp(16px, 1.041vw, 20px) !important;
+  -webkit-text-size-adjust: 100%;
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-ink font-body antialiased;
+}
+
+/* ---------- Reusable component classes ---------- */
+@layer components {
+  /* Section vertical rhythm */
+  .section {
+    @apply py-[clamp(2.5rem,6vw,4.5rem)] px-[1.5rem] md:px-[6rem];
+  }
+
+  /* Page-width wrapper */
+  .wrap {
+    @apply mx-auto w-full max-w-[1536px];
+  }
+
+  /* Small uppercase kicker with the short line before it */
+  .kicker {
+    @apply inline-flex items-center gap-3 text-[0.7rem] font-semibold
+           tracking-[0.3em] uppercase text-coral;
+  }
+  .kicker::before {
+    content: "";
+    @apply inline-block h-[2px] w-8 bg-coral;
+  }
+
+  /* Display heading */
+  .heading {
+    @apply font-display font-bold text-[clamp(1.75rem,3vw,2.5rem)]
+           leading-tight text-ink;
+  }
+
+  /* Base button */
+  .btn {
+    @apply inline-flex items-center justify-center gap-2 rounded-md
+           px-[clamp(1.25rem,2.5vw,1.75rem)] py-[clamp(0.6rem,1vw,0.8rem)]
+           text-[0.8rem] font-medium transition-colors duration-300;
+  }
+
+  /* Primary solid cyan button */
+  .btn-solid {
+    @apply bg-cyan text-white hover:bg-cyan-dark;
+  }
+
+  /* Outline button */
+  .btn-outline {
+    @apply border border-ink/25 text-ink hover:border-cyan hover:text-cyan;
+  }
+
+  /* Form field */
+  .field {
+    @apply w-full rounded-md border border-ink/10 bg-white px-4 py-3
+           text-[0.85rem] text-ink placeholder:text-stone/70
+           focus:border-cyan focus:outline-none;
+  }
+}
