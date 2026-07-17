@@ -34,7 +34,7 @@ export default function DentalCarePage() {
 
       <section className="section pt-8">
         <div className="wrap">
-          <h1 className="heading text-center text-[clamp(2rem,3.5vw,2.75rem)]">
+          <h1 className="heading-xl text-center">
             Dental Care
           </h1>
 
@@ -46,7 +46,7 @@ export default function DentalCarePage() {
               width={1600}
               height={800}
               priority
-              className="h-[clamp(16rem,38vw,26rem)] w-full object-cover"
+              className="h-[26rem] max-h-[50vh] w-full object-cover"
             />
           </div>
 
@@ -54,7 +54,7 @@ export default function DentalCarePage() {
           <div className="mt-12 grid gap-10 lg:grid-cols-[1.7fr_1fr]">
             {/* Article */}
             <article>
-              <p className="text-[0.9rem] leading-relaxed text-stone">
+              <p className="text-body">
                 Experience enhanced efficiency, heightened productivity and a
                 greater edge over your competitors. In the new era of
                 technology we look in the future with certainty and pride,
@@ -64,10 +64,10 @@ export default function DentalCarePage() {
                 professional website.
               </p>
 
-              <h2 className="mt-8 font-display text-[1.1rem] font-bold">
+              <h2 className="heading-sm mt-8">
                 Our Service Overview
               </h2>
-              <p className="mt-3 text-[0.9rem] leading-relaxed text-stone">
+              <p className="text-body mt-3">
                 Companies seem to dislike the term &lsquo;turnaround
                 consulting&rsquo; because it represents failure. The truth is
                 that turnaround consulting represents success at realizing the
@@ -76,7 +76,7 @@ export default function DentalCarePage() {
                 anymore companies pivot into more.
               </p>
 
-              <ul className="mt-5 list-disc space-y-2 pl-5 text-[0.9rem] leading-relaxed text-stone marker:text-ink">
+              <ul className="text-body mt-5 list-disc space-y-2 pl-5 marker:text-ink">
                 {sedationLevels.map((item) => (
                   <li key={item}>{item}</li>
                 ))}
@@ -92,10 +92,10 @@ export default function DentalCarePage() {
                 />
               </div>
 
-              <h2 className="mt-8 font-display text-[1.1rem] font-bold">
+              <h2 className="heading-sm mt-8">
                 Importance of the proper dental treatment
               </h2>
-              <p className="mt-3 text-[0.9rem] leading-relaxed text-stone">
+              <p className="text-body mt-3">
                 A neatly maintained building is an important asset to every
                 organization. It reflects who you are and influences how your
                 first priority should be considered as our customers perceive
@@ -109,15 +109,15 @@ export default function DentalCarePage() {
             {/* Sidebar */}
             <aside className="space-y-6 lg:sticky lg:top-6 lg:self-start">
               {/* Opening hours */}
-              <div className="rounded-xl border border-ink/10 bg-white p-6">
-                <h2 className="font-display text-[1rem] font-bold">
+              <div className="card">
+                <h2 className="heading-sm">
                   Opening Hours
                 </h2>
                 <ul className="mt-4">
                   {hours.map((row) => (
                     <li
                       key={row.day}
-                      className={`flex items-center justify-between border-b border-ink/10 py-3 text-[0.85rem] last:border-0 ${
+                      className={`flex items-center justify-between border-b border-ink/10 py-3 text-sm last:border-0 ${
                         row.highlight ? "text-coral" : "text-ink"
                       }`}
                     >
@@ -131,17 +131,17 @@ export default function DentalCarePage() {
               </div>
 
               {/* Call us card */}
-              <div className="rounded-xl bg-cyan p-6 text-white">
-                <h2 className="font-display text-[1rem] font-bold">
+              <div className="card border-0 bg-cyan text-white">
+                <h2 className="heading-sm text-white">
                   Call us today!
                 </h2>
-                <p className="mt-2 text-[0.85rem] leading-relaxed text-white/80">
+                <p className="text-small mt-2 text-white/80">
                   Fill out the form below and we will contact you in the
                   shortest time possible.
                 </p>
                 <a
                   href="tel:01234567890"
-                  className="mt-4 inline-flex items-center gap-3 font-display text-[1.05rem] font-bold"
+                  className="heading-sm mt-4 inline-flex items-center gap-3 text-white"
                 >
                   <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
                     <path d="M6.6 10.8a15.6 15.6 0 0 0 6.6 6.6l2.2-2.2a1 1 0 0 1 1-.25 11.4 11.4 0 0 0 3.6.57 1 1 0 0 1 1 1V20a1 1 0 0 1-1 1A17 17 0 0 1 3 4a1 1 0 0 1 1-1h3.5a1 1 0 0 1 1 1 11.4 11.4 0 0 0 .57 3.6 1 1 0 0 1-.25 1Z" />

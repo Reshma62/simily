@@ -69,7 +69,7 @@ No `tailwind.config.js` — all design tokens live in `app/globals.css` inside a
 | `--color-stone`   | `#64707a` | Muted text                      |
 | `--color-coral`   | `#f4502c` | Kickers, service icons, badge   |
 
-Fonts: **Plus Jakarta Sans** (display) and **Jost** (body), self-hosted via `next/font/google` and wired to `--font-display` / `--font-body`.
+Fonts: **Cabinet Grotesk** (headings, loaded from the free Fontshare CDN in `app/layout.jsx`) and **Lato** (body, self-hosted via `next/font/google`), wired to `--font-display` / `--font-body`.
 
 Reusable component classes (defined in `@layer components`):
 

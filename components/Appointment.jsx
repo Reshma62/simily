@@ -6,7 +6,7 @@ export default function Appointment() {
       <div className="wrap">
         <p className="kicker">Contact us</p>
         <h2 className="heading mt-4">Book for appointment</h2>
-        <p className="mt-4 max-w-md text-[0.9rem] leading-relaxed text-stone">
+        <p className="text-body mt-4 max-w-md">
           We consider all the drivers of change gives you the blocks you need
           to change to create a truly professional website.
         </p>

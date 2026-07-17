@@ -15,10 +15,10 @@ export default function AppointmentPage() {
       <section className="section pt-12">
         <div className="wrap text-center">
           <p className="kicker justify-center">Contact us</p>
-          <h1 className="heading mt-4 text-[clamp(2rem,3.5vw,2.75rem)]">
+          <h1 className="heading-xl mt-4">
             Book for appointment
           </h1>
-          <p className="mx-auto mt-4 max-w-md text-[0.9rem] leading-relaxed text-stone">
+          <p className="text-body mx-auto mt-4 max-w-md">
             We consider all the drivers of change gives you the blocks &amp;
             components you need to change to create a truly professional
             website.
@@ -73,7 +73,7 @@ export default function AppointmentPage() {
           <iframe
             title="Clinic location map"
             src="https://www.openstreetmap.org/export/embed.html?bbox=13.28%2C52.48%2C13.34%2C52.51&layer=mapnik&marker=52.495%2C13.31"
-            className="h-[clamp(20rem,45vw,32rem)] w-full border-0"
+            className="h-[30rem] max-h-[60vh] w-full border-0"
             loading="lazy"
           />
         </div>

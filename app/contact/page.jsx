@@ -52,10 +52,10 @@ export default function ContactPage() {
 
           <div>
             <p className="kicker">Contact info</p>
-            <h1 className="heading mt-4 text-[clamp(2rem,3.5vw,2.75rem)]">
+            <h1 className="heading-xl mt-4">
               Contact us today
             </h1>
-            <p className="mt-5 max-w-lg text-[0.95rem] leading-relaxed text-stone">
+            <p className="text-body mt-5 max-w-lg">
               Fill out the form below and we will contact you in the shortest
               time possible. We consider all the drivers of change gives you
               the blocks &amp; components you need to change to create.
@@ -70,12 +70,12 @@ export default function ContactPage() {
                   {row.href ? (
                     <a
                       href={row.href}
-                      className="max-w-xs text-[0.95rem] font-semibold hover:text-cyan"
+                      className="max-w-xs text-base font-semibold hover:text-cyan"
                     >
                       {row.label}
                     </a>
                   ) : (
-                    <span className="max-w-xs text-[0.95rem] font-semibold">
+                    <span className="max-w-xs text-base font-semibold">
                       {row.label}
                     </span>
                   )}
@@ -92,7 +92,7 @@ export default function ContactPage() {
           <div>
             <p className="kicker">Write us</p>
             <h2 className="heading mt-4">Get in touch</h2>
-            <p className="mt-4 max-w-lg text-[0.9rem] leading-relaxed text-stone">
+            <p className="text-body mt-4 max-w-lg">
               We consider all the drivers of change gives you the blocks &amp;
               components you need to change to create a truly professional
               website.

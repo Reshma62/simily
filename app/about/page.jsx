@@ -28,13 +28,13 @@ export default function AboutPage() {
           <div className="grid items-end gap-6 lg:grid-cols-[1.3fr_1fr]">
             <div>
               <p className="kicker">About our clinic</p>
-              <h1 className="heading mt-4 text-[clamp(2rem,3.5vw,2.75rem)]">
+              <h1 className="heading-xl mt-4">
                 We have expert dentists,
                 <br />
                 You can trust us.
               </h1>
             </div>
-            <p className="max-w-sm text-[0.85rem] leading-relaxed text-stone">
+            <p className="text-small max-w-sm">
               Experience enhanced efficiency, heightened productivity, and a
               greater edge over your competitors with these advanced
               capabilities to support all the patients.
@@ -49,7 +49,7 @@ export default function AboutPage() {
               width={1600}
               height={760}
               priority
-              className="h-[clamp(18rem,42vw,30rem)] w-full object-cover"
+              className="h-[28rem] max-h-[55vh] w-full object-cover"
             />
             <button
               type="button"
@@ -67,7 +67,7 @@ export default function AboutPage() {
       {/* ---- Statement + stats ---- */}
       <section className="section pt-0">
         <div className="wrap text-center">
-          <h2 className="mx-auto max-w-2xl font-display text-[clamp(1.15rem,2vw,1.5rem)] font-bold leading-snug">
+          <h2 className="heading-md mx-auto max-w-2xl">
             We consider all the patients as our responsibility and try to solve
             each and every problems with our expert dentist .
           </h2>
@@ -75,10 +75,10 @@ export default function AboutPage() {
           <div className="mx-auto mt-10 grid max-w-3xl gap-8 sm:grid-cols-3">
             {stats.map((stat) => (
               <div key={stat.label}>
-                <p className="font-display text-[clamp(2rem,3vw,2.5rem)] font-bold text-coral">
+                <p className="heading-xl text-coral">
                   {stat.value}
                 </p>
-                <p className="mt-1 text-[0.85rem] text-ink">{stat.label}</p>
+                <p className="mt-1 text-sm text-ink">{stat.label}</p>
               </div>
             ))}
           </div>

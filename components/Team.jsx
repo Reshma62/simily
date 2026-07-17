@@ -27,7 +27,7 @@ export default function Team() {
       <div className="wrap text-center">
         <p className="kicker justify-center">Experienced and skilled</p>
         <h2 className="heading mt-4">Our Dental Team</h2>
-        <p className="mx-auto mt-4 max-w-md text-[0.9rem] leading-relaxed text-stone">
+        <p className="text-body mx-auto mt-4 max-w-md">
           We consider all the drivers of change gives you the blocks &amp;
           components you need to change to create a truly professional website.
         </p>
@@ -36,7 +36,7 @@ export default function Team() {
           {members.map((member) => (
             <article
               key={member.name}
-              className="overflow-hidden rounded-xl border border-ink/10 bg-white"
+              className="card overflow-hidden p-0"
             >
               <div className="relative h-72">
                 <Image
@@ -48,10 +48,10 @@ export default function Team() {
                 />
               </div>
               <div className="py-5">
-                <h3 className="font-display text-[1rem] font-bold">
+                <h3 className="heading-xs">
                   {member.name}
                 </h3>
-                <p className="mt-1 text-[0.8rem] text-stone">{member.role}</p>
+                <p className="mt-1 text-xs text-stone">{member.role}</p>
               </div>
             </article>
           ))}

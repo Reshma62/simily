@@ -43,7 +43,7 @@ export default function Testimonials() {
         <div className="text-center">
           <p className="kicker justify-center">Testimonials</p>
           <h2 className="heading mt-4">What our clients say</h2>
-          <p className="mx-auto mt-4 max-w-md text-[0.9rem] leading-relaxed text-stone">
+          <p className="text-body mx-auto mt-4 max-w-md">
             We consider all the drivers of change gives you the blocks &amp;
             components you need to change to create a truly professional
             website.
@@ -54,7 +54,7 @@ export default function Testimonials() {
           {testimonials.map((t) => (
             <figure key={t.name}>
               <Stars />
-              <blockquote className="mt-4 text-[0.9rem] leading-relaxed text-stone">
+              <blockquote className="text-small mt-4">
                 &ldquo;{t.quote}&rdquo;
               </blockquote>
               <figcaption className="mt-5 flex items-center gap-3">
@@ -67,7 +67,7 @@ export default function Testimonials() {
                     sizes="40px"
                   />
                 </span>
-                <span className="text-[0.85rem] font-semibold">{t.name}</span>
+                <span className="text-sm font-semibold">{t.name}</span>
               </figcaption>
             </figure>
           ))}

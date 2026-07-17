@@ -1,12 +1,19 @@
 /* ================================================================
    Smily — global styles (Tailwind CSS v4)
-   Theme tokens are declared here with @theme (no tailwind.config).
-   Palette matches the teal/cyan dental-care design.
+   ALL design control lives in this file:
+   - colors + type scale → @theme tokens
+   - fonts → @theme inline
+   - reusable classes → @layer components
+   Rules:
+   - clamp() is used ONLY on html font-size (fluid root scaling)
+   - everything else uses rem
+   - button & card padding use em (scales with their font size)
+   - components should use these classes, not raw arbitrary values
    ================================================================ */
 @import "tailwindcss";
 
 @theme {
-  /* Brand palette */
+  /* ---- Brand palette ---- */
   --color-cyan: #0db4d4;      /* primary buttons / links        */
   --color-cyan-dark: #0a97b2; /* button hover                   */
   --color-teal: #12403c;      /* dark section bg (services)     */
@@ -15,14 +22,33 @@
   --color-ink: #14303c;       /* headings / body text           */
   --color-stone: #64707a;     /* muted text                     */
   --color-coral: #f4502c;     /* kickers / service icons        */
+  --color-body-text: #215B62;  /* body text      */
 
-  /* Typography (variables injected by next/font in app/layout.jsx) */
-  --font-display: var(--font-jakarta), Georgia, sans-serif;
-  --font-body: var(--font-jost), "Segoe UI", sans-serif;
+  /* ---- Type scale (rem only) — overrides Tailwind's text-* utilities,
+     so changing a value here updates the whole site ---- */
+  --text-tiny: 0.7rem;        /* kickers                        */
+  --text-xs: 0.75rem;         /* labels, meta, copyright        */
+  --text-sm: 0.85rem;         /* nav links, buttons, small copy */
+  --text-base: 0.95rem;       /* body copy                      */
+  --text-lg: 1.1rem;          /* card / article titles          */
+  --text-xl: 1.35rem;         /* statements                     */
+  --text-2xl: 1.6rem;
+  --text-3xl: 2.8rem;        /* section headings (h2)          */
+  --text-4xl: 3.6rem;        /* page headings (h1) / hero      */
+  --text-5xl: 3.8rem;
 }
 
-/* Fluid root font size — every rem-based Tailwind value scales
-   smoothly between small and large viewports. */
+/* Typography — MUST be `@theme inline`: the font variables are set on
+   <body> by next/font, so the var() has to be inlined into utilities and
+   resolved per-element. Cabinet Grotesk (headings) is self-hosted via
+   next/font/local in app/layout.jsx (--font-cabinet). */
+@theme inline {
+  --font-display: var(--font-cabinet), var(--font-lato), Georgia, sans-serif;
+  --font-body: var(--font-lato), "Segoe UI", sans-serif;
+}
+
+/* Fluid root font size — the ONLY clamp in the project. Every rem
+   value in the site scales smoothly with the viewport through this. */
 html {
   font-size: clamp(16px, 1.041vw, 20px) !important;
   -webkit-text-size-adjust: 100%;
@@ -33,21 +59,53 @@ body {
   @apply bg-white text-ink font-body antialiased;
 }
 
+/* ---------- Base typography ----------
+   All headings use Cabinet Grotesk; everything else inherits
+   Lato from body. */
+@layer base {
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display;
+  }
+}
+
 /* ---------- Reusable component classes ---------- */
 @layer components {
-  /* Section vertical rhythm */
+  /* ----- Layout ----- */
   .section {
-    @apply py-[clamp(2.5rem,6vw,4.5rem)] px-[1.5rem] md:px-[6rem];
+    @apply py-16 px-6 md:px-24;
   }
-
-  /* Page-width wrapper */
   .wrap {
     @apply mx-auto w-full max-w-[1536px];
   }
 
-  /* Small uppercase kicker with the short line before it */
+  /* ----- Headings (one class = size + font + color) ----- */
+  .heading-xl {
+    @apply font-display text-4xl font-bold leading-[1.2em] text-ink;
+  } /* page h1 / hero */
+  .heading {
+    @apply font-display text-3xl font-bold leading-tight text-ink;
+  } /* section h2 */
+  .heading-md {
+    @apply font-display text-xl font-bold leading-snug text-ink;
+  } /* statements */
+  .heading-sm {
+    @apply font-display text-lg font-bold text-ink;
+  } /* card / article titles */
+  .heading-xs {
+    @apply font-display text-base font-bold text-ink;
+  } /* small feature titles */
+
+  /* ----- Body text ----- */
+  .text-body {
+    @apply text-base leading-relaxed text-body-text;
+  }
+  .text-small {
+    @apply text-sm leading-relaxed text-body-text;
+  }
+
+  /* ----- Kicker (small uppercase label with short line) ----- */
   .kicker {
-    @apply inline-flex items-center gap-3 text-[0.7rem] font-semibold
+    @apply inline-flex items-center gap-3 text-tiny font-semibold
            tracking-[0.3em] uppercase text-coral;
   }
   .kicker::before {
@@ -55,33 +113,30 @@ body {
     @apply inline-block h-[2px] w-8 bg-coral;
   }
 
-  /* Display heading */
-  .heading {
-    @apply font-display font-bold text-[clamp(1.75rem,3vw,2.5rem)]
-           leading-tight text-ink;
-  }
-
-  /* Base button */
+  /* ----- Buttons (padding in em → scales with font size) ----- */
   .btn {
     @apply inline-flex items-center justify-center gap-2 rounded-md
-           px-[clamp(1.25rem,2.5vw,1.75rem)] py-[clamp(0.6rem,1vw,0.8rem)]
-           text-[0.8rem] font-medium transition-colors duration-300;
+           text-sm font-medium transition-colors duration-300;
+    padding: 0.75em 1.6em;
   }
-
-  /* Primary solid cyan button */
   .btn-solid {
     @apply bg-cyan text-white hover:bg-cyan-dark;
   }
-
-  /* Outline button */
   .btn-outline {
     @apply border border-ink/25 text-ink hover:border-cyan hover:text-cyan;
   }
 
-  /* Form field */
+  /* ----- Card (padding in em) ----- */
+  .card {
+    @apply rounded-xl border border-ink/10 bg-white;
+    padding: 1.5em;
+  }
+
+  /* ----- Form field (padding in em) ----- */
   .field {
-    @apply w-full rounded-md border border-ink/10 bg-white px-4 py-3
-           text-[0.85rem] text-ink placeholder:text-stone/70
+    @apply w-full rounded-md border border-ink/10 bg-white text-sm
+           text-ink placeholder:text-stone/70
            focus:border-cyan focus:outline-none;
+    padding: 0.85em 1.1em;
   }
 }

@@ -24,8 +24,8 @@ export default function WorkWithUs() {
               </svg>
             </span>
             <div>
-              <p className="font-display text-[1rem] font-bold leading-none">2000+</p>
-              <p className="mt-1 text-[0.7rem] text-stone">Happy Clients</p>
+              <p className="heading-xs leading-none">2000+</p>
+              <p className="mt-1 text-tiny text-stone">Happy Clients</p>
             </div>
           </div>
         </div>
@@ -36,7 +36,7 @@ export default function WorkWithUs() {
           <h2 className="heading mt-4">
             Our team has only one mission that is to take care your smile
           </h2>
-          <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-stone">
+          <p className="text-body mt-5 max-w-xl">
             Experience enhanced efficiency, heightened productivity and a
             greater edge over your competitors..
           </p>

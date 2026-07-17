@@ -13,7 +13,7 @@ export default function Growing() {
             We&apos;re one of the most fastest-growing dental care companies
           </h2>
 
-          <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-ink/70">
+          <p className="text-body mt-5 max-w-xl text-ink/70">
             Our team of skilled and experienced dental professionals strives to
             create comfortable and welcoming environment for each and every
             patient. From routine cleanings to complex procedures.
@@ -21,19 +21,19 @@ export default function Growing() {
 
           <div className="mt-8 grid gap-8 sm:grid-cols-2">
             <div>
-              <h3 className="font-display text-[0.95rem] font-bold">
+              <h3 className="heading-xs">
                 Easy appointment system
               </h3>
-              <p className="mt-2 text-[0.85rem] leading-relaxed text-ink/70">
+              <p className="text-small mt-2 text-ink/70">
                 Use and re-use responsive sections too a main create the
                 perfect layout. Find all the solutions here.
               </p>
             </div>
             <div>
-              <h3 className="font-display text-[0.95rem] font-bold">
+              <h3 className="heading-xs">
                 Get membership discount
               </h3>
-              <p className="mt-2 text-[0.85rem] leading-relaxed text-ink/70">
+              <p className="text-small mt-2 text-ink/70">
                 Use and re-use responsive sections too a main create the
                 perfect layout. Find all the solutions here.
               </p>

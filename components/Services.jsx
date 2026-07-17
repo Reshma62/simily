@@ -33,7 +33,7 @@ export default function Services() {
       <div className="wrap">
         <p className="kicker">Professional and trained</p>
         <h2 className="heading mt-4 text-white">Services We Provide</h2>
-        <p className="mt-4 max-w-md text-[0.9rem] leading-relaxed text-white/60">
+        <p className="text-body mt-4 max-w-md text-white/60">
           We consider all the drivers of change gives you the blocks &amp;
           components you need to change to create a truly professional website.
         </p>
@@ -47,20 +47,20 @@ export default function Services() {
                 </svg>
               </span>
 
-              <h3 className="mt-5 font-display text-[1.05rem] font-bold text-white">
+              <h3 className="heading-sm mt-5 text-white">
                 {service.title}
               </h3>
 
-              <p className="mt-3 text-[0.85rem] leading-relaxed text-white/60">
+              <p className="text-small mt-3 text-white/60">
                 In the new era of technology we look in the future with
                 certainty and pride, that&apos;s why our theme looks so good.
               </p>
 
               <a
                 href="#appointment"
-                className="mt-4 inline-flex items-center gap-2 text-[0.8rem] font-medium text-white transition-colors hover:text-aqua"
+                className="mt-4 inline-flex items-center gap-2 text-xs font-medium text-white transition-colors hover:text-aqua"
               >
-                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white/40 text-[0.6rem]">
+                <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white/40 text-tiny">
                   →
                 </span>
                 Read More

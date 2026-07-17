@@ -52,7 +52,7 @@ export default function ServicesPage() {
         <div className="wrap text-center">
           <p className="kicker justify-center">Professional and trained</p>
           <h1 className="heading mt-4">Services We Provide</h1>
-          <p className="mx-auto mt-4 max-w-md text-[0.9rem] leading-relaxed text-stone">
+          <p className="text-body mx-auto mt-4 max-w-md">
             We consider all the drivers of change gives you the blocks &amp;
             components you need to change to create a truly professional
             website.
@@ -64,17 +64,17 @@ export default function ServicesPage() {
                 <span className="mx-auto flex h-12 w-12 items-center justify-center rounded-lg bg-coral text-white">
                   <ToothIcon />
                 </span>
-                <h2 className="mt-5 font-display text-[1rem] font-bold">
+                <h2 className="heading-xs mt-5">
                   {title}
                 </h2>
-                <p className="mt-3 text-[0.85rem] leading-relaxed text-stone">
+                <p className="text-small mt-3">
                   In the new era of technology we look in the future with
                   certainty and pride, that&apos;s why our theme looks so good
                   whatever device you use.
                 </p>
                 <a
                   href="/services/dental-care"
-                  className="mt-4 inline-block text-[0.8rem] font-medium text-cyan hover:text-cyan-dark"
+                  className="mt-4 inline-block text-xs font-medium text-cyan hover:text-cyan-dark"
                 >
                   Learn More
                 </a>
@@ -92,7 +92,7 @@ export default function ServicesPage() {
             <h2 className="heading mt-4">
               Taking care of your smile with best possible services
             </h2>
-            <p className="mt-5 max-w-xl text-[0.95rem] leading-relaxed text-stone">
+            <p className="text-body mt-5 max-w-xl">
               Experience enhanced efficiency, heightened productivity and a
               greater edge over your competitors..
             </p>
@@ -100,10 +100,10 @@ export default function ServicesPage() {
             <div className="mt-8 space-y-6">
               {reasons.map((reason) => (
                 <div key={reason.title}>
-                  <h3 className="font-display text-[0.95rem] font-bold">
+                  <h3 className="heading-xs">
                     {reason.title}
                   </h3>
-                  <p className="mt-2 max-w-md text-[0.85rem] leading-relaxed text-stone">
+                  <p className="text-small mt-2 max-w-md">
                     {reason.text}
                   </p>
                 </div>

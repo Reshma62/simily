@@ -41,20 +41,20 @@ export default function Footer() {
         <div className="grid gap-10 md:grid-cols-[1.5fr_repeat(4,1fr)]">
           <div>
             <Logo light />
-            <p className="mt-3 text-[0.85rem] text-white/60">
+            <p className="mt-3 text-sm text-white/60">
               Bring smile on your face
             </p>
           </div>
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h3 className="text-[0.9rem] font-semibold">{col.title}</h3>
+              <h3 className="heading-xs text-white">{col.title}</h3>
               <ul className="mt-4 space-y-2">
                 {col.links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-[0.85rem] text-white/60 transition-colors hover:text-white"
+                      className="text-sm text-white/60 transition-colors hover:text-white"
                     >
                       {link}
                     </a>
@@ -66,7 +66,7 @@ export default function Footer() {
         </div>
 
         <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
-          <p className="text-[0.8rem] text-white/60">
+          <p className="text-xs text-white/60">
             Copyright © 2026 Smily. All Rights Reserved
           </p>
           <div className="flex gap-4">
