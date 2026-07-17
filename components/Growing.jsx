@@ -6,7 +6,7 @@ export default function Growing() {
     <section className="bg-cyan py-7 md:py-0 md:pb-[7rem] px-6 md:px-24 ">
       <div className="wrap grid gap-12 items-stretch lg:grid-cols-2">
         {/* ---- Copy ---- */}
-        <div className="pt-3 md:py-24 lg:py-32">
+        <div className="pt-3 md:pt-24 lg:pt-32">
           <p className="kicker text-ink before:bg-ink">Benefits from flox</p>
 
           <h2 className="heading mt-4">
@@ -38,12 +38,12 @@ export default function Growing() {
         </div>
 
         {/* ---- Image ---- */}
-        <div className="relative min-h-[20rem]">
+        <div className="relative ">
           <Image
             src="/image-2.png"
             alt="Dentist performing a dental procedure"
             fill
-            className="object-cover"
+            className="object-cover rounded-2xl md:rounded-b-2xl"
           />
         </div>
       </div>
