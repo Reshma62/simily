@@ -43,7 +43,7 @@ export default function Growing() {
             src="/image-2.png"
             alt="Dentist performing a dental procedure"
             fill
-            className="object-cover rounded-2xl md:rounded-b-2xl"
+            className="object-cover rounded-2xl md:rounded-none md:rounded-b-2xl "
           />
         </div>
       </div>
