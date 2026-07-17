@@ -73,7 +73,7 @@ body {
 @layer components {
   /* ----- Layout ----- */
   .section {
-    @apply py-16 px-6 md:px-24;
+    @apply py-10 md:py-16 px-6 md:px-24;
   }
   .wrap {
     @apply mx-auto w-full max-w-[1536px];

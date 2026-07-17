@@ -38,7 +38,7 @@ export default function ContactPage() {
 
       {/* ---- Contact info ---- */}
       <section className="section pt-8">
-        <div className="wrap grid items-center gap-[5rem] lg:grid-cols-2">
+        <div className="wrap grid items-center gap-6 md:gap-[5rem] lg:grid-cols-2">
           <div className="overflow-hidden rounded-[1rem] w-full h-[20rem] lg:h-[30rem]">
             <Image
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80"
