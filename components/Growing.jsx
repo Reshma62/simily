@@ -3,10 +3,10 @@ import Image from "next/image";
 /* Bright aqua band — split copy + full-bleed image on the right. */
 export default function Growing() {
   return (
-    <section className="bg-aqua">
-      <div className="wrap grid items-stretch lg:grid-cols-2">
+    <section className="bg-cyan py-7 md:py-0 md:pb-[7rem] px-6 md:px-24 ">
+      <div className="wrap grid gap-12 items-stretch lg:grid-cols-2">
         {/* ---- Copy ---- */}
-        <div className="section">
+        <div className="pt-3 md:py-24 lg:py-32">
           <p className="kicker text-ink before:bg-ink">Benefits from flox</p>
 
           <h2 className="heading mt-4">
@@ -19,23 +19,19 @@ export default function Growing() {
             patient. From routine cleanings to complex procedures.
           </p>
 
-          <div className="mt-8 grid gap-8 sm:grid-cols-2">
+          <div className="mt-5 md:mt-[6rem] grid gap-8 sm:grid-cols-2">
             <div>
-              <h3 className="heading-xs">
-                Easy appointment system
-              </h3>
+              <h3 className="heading-xs">Easy appointment system</h3>
               <p className="text-small mt-2 text-ink/70">
-                Use and re-use responsive sections too a main create the
-                perfect layout. Find all the solutions here.
+                Use and re-use responsive sections too a main create the perfect
+                layout. Find all the solutions here.
               </p>
             </div>
             <div>
-              <h3 className="heading-xs">
-                Get membership discount
-              </h3>
+              <h3 className="heading-xs">Get membership discount</h3>
               <p className="text-small mt-2 text-ink/70">
-                Use and re-use responsive sections too a main create the
-                perfect layout. Find all the solutions here.
+                Use and re-use responsive sections too a main create the perfect
+                layout. Find all the solutions here.
               </p>
             </div>
           </div>
@@ -44,11 +40,10 @@ export default function Growing() {
         {/* ---- Image ---- */}
         <div className="relative min-h-[20rem]">
           <Image
-            src="https://images.unsplash.com/photo-1606811971618-4486d14f3f99?auto=format&fit=crop&w=1000&q=80"
+            src="/image-2.png"
             alt="Dentist performing a dental procedure"
             fill
             className="object-cover"
-            sizes="(min-width: 1024px) 50vw, 100vw"
           />
         </div>
       </div>

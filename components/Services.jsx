@@ -58,7 +58,7 @@ export default function Services() {
 
               <a
                 href="#appointment"
-                className="mt-4 inline-flex items-center gap-2 text-xs font-medium text-white transition-colors hover:text-aqua"
+                className="mt-4 inline-flex items-center gap-2 text-xs font-medium text-white transition-colors hover:text-cyan"
               >
                 <span className="flex h-5 w-5 items-center justify-center rounded-full border border-white/40 text-tiny">
                   →

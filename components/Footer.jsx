@@ -34,27 +34,28 @@ const socials = [
   },
 ];
 
+/* Light footer (design v2): white bg, dark titles, muted teal links,
+   cyan socials. On mobile the 4 link columns flow 2 per row. */
 export default function Footer() {
   return (
-    <footer id="contact" className="bg-teal text-white">
-      <div className="wrap section">
-        <div className="grid gap-10 md:grid-cols-[1.5fr_repeat(4,1fr)]">
-          <div>
-            <Logo light />
-            <p className="mt-3 text-sm text-white/60">
-              Bring smile on your face
-            </p>
+    <footer id="contact" className="bg-white section">
+      <div className="wrap ">
+        <div className="grid grid-cols-2 gap-10 md:grid-cols-[1.5fr_repeat(4,1fr)]">
+          {/* Brand — full width on mobile so links sit 2-up below it */}
+          <div className="col-span-2 md:col-span-1">
+            <Logo />
+            <p className="text-small mt-3">Bring smile on your face</p>
           </div>
 
           {columns.map((col) => (
             <div key={col.title}>
-              <h3 className="heading-xs text-white">{col.title}</h3>
+              <h3 className="heading-xs">{col.title}</h3>
               <ul className="mt-4 space-y-2">
                 {col.links.map((link) => (
                   <li key={link}>
                     <a
                       href="#"
-                      className="text-sm text-white/60 transition-colors hover:text-white"
+                      className="text-sm text-body-text transition-colors hover:text-cyan"
                     >
                       {link}
                     </a>
@@ -65,8 +66,8 @@ export default function Footer() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-white/10 pt-6 sm:flex-row">
-          <p className="text-xs text-white/60">
+        <div className="mt-12 flex flex-col items-center justify-between gap-4 border-t border-ink/10 pt-6 sm:flex-row">
+          <p className="text-xs text-body-text">
             Copyright © 2026 Smily. All Rights Reserved
           </p>
           <div className="flex gap-4">
@@ -75,9 +76,13 @@ export default function Footer() {
                 key={s.name}
                 href="#"
                 aria-label={s.name}
-                className="text-white/60 transition-colors hover:text-white"
+                className="text-cyan transition-colors hover:text-cyan-dark"
               >
-                <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                <svg
+                  viewBox="0 0 24 24"
+                  className="h-5 w-5 fill-current"
+                  aria-hidden="true"
+                >
                   {s.icon}
                 </svg>
               </a>

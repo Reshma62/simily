@@ -38,33 +38,36 @@ export default function ContactPage() {
 
       {/* ---- Contact info ---- */}
       <section className="section pt-8">
-        <div className="wrap grid items-center gap-10 lg:grid-cols-2">
-          <div className="overflow-hidden rounded-[1rem]">
+        <div className="wrap grid items-center gap-[5rem] lg:grid-cols-2">
+          <div className="overflow-hidden rounded-[1rem] w-full h-[20rem] lg:h-[30rem]">
             <Image
               src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?auto=format&fit=crop&w=1000&q=80"
               alt="Friendly clinic receptionist"
-              width={1000}
-              height={760}
-              priority
-              className="h-full w-full object-cover"
+              // fill
+              // priority
+              className="w-full object-cover object-center h-full"
+              width={500}
+              height={500}
             />
           </div>
 
           <div>
             <p className="kicker">Contact info</p>
-            <h1 className="heading-xl mt-4">
-              Contact us today
-            </h1>
+            <h1 className="heading-xl mt-4">Contact us today</h1>
             <p className="text-body mt-5 max-w-lg">
               Fill out the form below and we will contact you in the shortest
-              time possible. We consider all the drivers of change gives you
-              the blocks &amp; components you need to change to create.
+              time possible. We consider all the drivers of change gives you the
+              blocks &amp; components you need to change to create.
             </p>
 
             <ul className="mt-8 space-y-5">
               {contactRows.map((row) => (
                 <li key={row.label} className="flex items-center gap-4">
-                  <svg viewBox="0 0 24 24" className="h-6 w-6 shrink-0 fill-coral" aria-hidden="true">
+                  <svg
+                    viewBox="0 0 24 24"
+                    className="h-6 w-6 shrink-0 fill-coral"
+                    aria-hidden="true"
+                  >
                     {row.icon}
                   </svg>
                   {row.href ? (

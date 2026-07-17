@@ -14,10 +14,10 @@
 
 @theme {
   /* ---- Brand palette ---- */
-  --color-cyan: #0db4d4;      /* primary buttons / links        */
+  --color-cyan: #00CAE0;      /* primary buttons / links        */
   --color-cyan-dark: #0a97b2; /* button hover                   */
-  --color-teal: #12403c;      /* dark section bg (services)     */
-  --color-aqua: #36d1e0;      /* bright section bg (growing)    */
+  --color-teal: #073E44;      /* dark section bg (services)     */
+
   --color-mint: #e9f7f6;      /* pale section bg (appointment)  */
   --color-ink: #14303c;       /* headings / body text           */
   --color-stone: #64707a;     /* muted text                     */
@@ -33,6 +33,7 @@
   --text-lg: 1.1rem;          /* card / article titles          */
   --text-xl: 1.35rem;         /* statements                     */
   --text-2xl: 1.6rem;
+  --text-xxl: 2rem;
   --text-3xl: 2.8rem;        /* section headings (h2)          */
   --text-4xl: 3.6rem;        /* page headings (h1) / hero      */
   --text-5xl: 3.8rem;
@@ -80,10 +81,10 @@ body {
 
   /* ----- Headings (one class = size + font + color) ----- */
   .heading-xl {
-    @apply font-display text-4xl font-bold leading-[1.2em] text-ink;
+    @apply font-display text-3xl md:text-4xl font-bold leading-[1.2em] text-ink;
   } /* page h1 / hero */
   .heading {
-    @apply font-display text-3xl font-bold leading-tight text-ink;
+    @apply font-display text-xxl md:text-3xl font-bold leading-tight text-ink;
   } /* section h2 */
   .heading-md {
     @apply font-display text-xl font-bold leading-snug text-ink;

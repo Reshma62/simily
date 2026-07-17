@@ -63,7 +63,6 @@ No `tailwind.config.js` — all design tokens live in `app/globals.css` inside a
 | `--color-cyan`    | `#0db4d4` | Primary buttons, links          |
 | `--color-cyan-dark` | `#0a97b2` | Button hover                  |
 | `--color-teal`    | `#12403c` | Services section & footer bg    |
-| `--color-aqua`    | `#36d1e0` | "Fastest-growing" section bg    |
 | `--color-mint`    | `#e9f7f6` | Appointment section bg, icons   |
 | `--color-ink`     | `#14303c` | Headings & body text            |
 | `--color-stone`   | `#64707a` | Muted text                      |

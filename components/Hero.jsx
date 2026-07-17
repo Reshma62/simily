@@ -2,7 +2,7 @@ import Image from "next/image";
 
 export default function Hero() {
   return (
-    <section id="home" className="pb-28">
+    <section id="home" className="py-5 md:py-0 px-6 md:px-24 md:pb-28">
       <div className="wrap flex  flex-col items-end md:h-[40rem]  justify-end gap-10 lg:flex-row">
         {/* ---- Copy ---- */}
         <div className="pt-24 lg:pt-0 w-full lg:max-w-1/2">
